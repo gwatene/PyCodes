@@ -1,0 +1,13 @@
+def myfunc(strng):
+    s=[]
+    for i in range(len(strng)):
+        if i % 2 ==0:
+            s.append(strng[i].upper())
+        else:
+            s.append(strng[i].lower())
+    return ''.join(s)
+
+
+    
+
+print(myfunc('Anthropomorphism'))

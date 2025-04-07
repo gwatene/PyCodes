@@ -1,0 +1,25 @@
+from random import shuffle 
+
+my_list = [' ','O',' ']
+
+def shuffle_list(my_list):
+    shuffle(my_list)
+    return my_list
+
+def p_guess()  :
+    guess = ''
+    while guess not in ['0','1','2']:
+        guess = input('please choose a number between index 0, 1, 2 ')
+    return int(guess)
+
+def check_guess(my_list, guess):
+    if my_list[guess] == 'O':
+        print(f'correct! the right position is {my_list}')
+    else:
+        print(f'wrong! Correct position is {my_list}')
+
+mixed_list = shuffle_list(my_list)
+
+guess = p_guess()
+
+check_guess(mixed_list, guess)
